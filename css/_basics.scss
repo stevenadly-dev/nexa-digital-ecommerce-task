@@ -1,0 +1,75 @@
+@font-face {
+  font-family: montsert;
+  src: url("../fonts/Montserrat-Regular.otf");
+}
+@font-face {
+  font-family: bengitc2;
+  src: url("../fonts/bengitc2.ttf");
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Italic.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box !important;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+/*that fix over-flow-x right-left extra width issue*/
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-center {
+  @include fx-center(column);
+}
+.fx-center-row {
+  @include fx-center(row);
+}
+
+.c-white {
+  color: $white;
+}
+.c-blue {
+  color: $blue;
+}
+.c-red {
+  color: $red;
+}
+
+.container {
+  max-width: 90%;
+  @include media-breakpoint-down(md) {
+    max-width: 96%;
+  }
+}
+[class*="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
